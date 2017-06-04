@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BindablePropertyDemo.Custom.MyCustomControl">
+    <Grid x:Name="grid" 
+          Padding="10,40,10,10"
+          HeightRequest="160"
+          VerticalOptions="Start">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Image x:Name="image"
+               HeightRequest="100" 
+               HorizontalOptions="Center"/>
+
+        <Label x:Name="title"
+               Text="BASKETBALL"
+               Grid.Row="1" 
+               FontSize="20"
+               VerticalOptions="Center"
+               TextColor="White"
+               HorizontalOptions="Center" 
+               FontAttributes="Bold"/>
+    </Grid>
+</ContentView>

@@ -2,10 +2,44 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:BindablePropertyDemo"
-             x:Class="BindablePropertyDemo.MainPage">
+             xmlns:custom="clr-namespace:BindablePropertyDemo.Custom"
+             x:Class="BindablePropertyDemo.MainPage"
+             BackgroundColor="#33334c">
+    <ScrollView>
+        <Grid RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid BackgroundColor="White">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="60"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid BackgroundColor="#ff4284" Padding="10">
+                    <Image Source="hamburger.png"/>
+                </Grid>
+                <Label Grid.Column="1" 
+                   Text="Home" 
+                   TextColor="#ff4284" 
+                   FontSize="20"
+                   Margin="5,0,0,0" 
+                   HorizontalOptions="Start" 
+                   VerticalOptions="Center"/>
+            </Grid>
+            <StackLayout Spacing="0" Grid.Row="1">
+                <custom:MyCustomControl BackgroundColor="#76dab2" 
+                                    TitleText="BASKETBALL" 
+                                    Image="basketball.png"/>
 
-	<Label Text="Welcome to Xamarin Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
+                <custom:MyCustomControl BackgroundColor="#7c57e4" 
+                                    TitleText="FOOTBALL" 
+                                    Image="football.png"/>
 
+                <custom:MyCustomControl BackgroundColor="#f1b136" 
+                                    TitleText="GRIDIRON" 
+                                    Image="gridiron.png"/>
+            </StackLayout>
+        </Grid>
+    </ScrollView>
 </ContentPage>

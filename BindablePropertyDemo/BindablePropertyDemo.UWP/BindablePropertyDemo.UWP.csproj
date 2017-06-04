@@ -108,6 +108,10 @@
     <None Include="BindablePropertyDemo.UWP_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="basketball.png" />
+    <Content Include="football.png" />
+    <Content Include="gridiron.png" />
+    <Content Include="hamburger.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-100.png" />
     <Content Include="Assets\LockScreenLogo.scale-125.png" />
